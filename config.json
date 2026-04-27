@@ -1,19 +1,19 @@
 {
-  "_comment": "Set provider to either 'pishock' or 'openshock'",
-  "provider": "openshock",
+  "_comment": "provider can be a single string ('openshock', 'pishock') or a list (['openshock', 'pishock']) to fire both at once",
+  "provider": ["openshock", "pishock"],
 
   "pishock": {
-    "_comment": "Credentials from https://pishock.com/#/account",
-    "username":    "YourPiShockUsername",
-    "api_key":     "your-api-key-here",
-    "share_code":  "your-share-code-here",
-    "device_name": "L4D2"
+    "_comment": "Credentials from https://pishock.com/#/account — add more share_codes to shock multiple people",
+    "username":     "YourPiShockUsername",
+    "api_key":      "your-api-key-here",
+    "share_codes":  ["your-share-code-here", "friends-share-code-here"],
+    "device_name":  "L4D2"
   },
 
   "openshock": {
-    "_comment": "Credentials from https://openshock.app",
-    "token":       "your-token-here",
-    "shocker_id":  "your-shocker-id-here",
+    "_comment": "Credentials from https://openshock.app — add more shocker_ids to shock multiple people",
+    "token":       "your-openshock-token-here",
+    "shocker_ids": ["your-shocker-id-here", "friends-shocker-id-here"],
     "device_name": "L4D2",
     "api_base":    "https://api.openshock.app"
   },
