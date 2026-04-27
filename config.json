@@ -1,0 +1,45 @@
+{
+  "_comment": "Set provider to either 'pishock' or 'openshock'",
+  "provider": "openshock",
+
+  "pishock": {
+    "_comment": "Credentials from https://pishock.com/#/account",
+    "username":    "YourPiShockUsername",
+    "api_key":     "your-api-key-here",
+    "share_code":  "your-share-code-here",
+    "device_name": "L4D2"
+  },
+
+  "openshock": {
+    "_comment": "Credentials from https://openshock.app",
+    "token":       "your-token-here",
+    "shocker_id":  "your-shocker-id-here",
+    "device_name": "L4D2",
+    "api_base":    "https://api.openshock.app"
+  },
+
+  "_comment_intensity": "intensity = base_intensity + intensity_per_down * (down_number - 1), capped at max_intensity",
+  "base_intensity":     5,
+  "intensity_per_down": 5,
+  "max_intensity":      50,
+  "max_duration_seconds": 3,
+
+  "_comment_ledge": "Ledge grabs trigger a shock at this fraction of normal intensity/duration",
+  "ledge_intensity_scale": 0.55,
+  "ledge_duration_scale":  0.5,
+  "ledge_shock":           true,
+
+  "_comment_duration": "One entry per difficulty: [Easy, Normal, Hard, Expert]",
+  "difficulty_base_duration":  [1.0, 2.0, 4.0, 7.0],
+  "difficulty_scale_duration": [0.5, 0.75, 1.0, 1.5],
+
+  "_comment_log": "Set steam_drive to the drive letter Steam is on (e.g. C, D, E). Or set console_log_path to a full path to override auto-detect entirely.",
+  "steam_drive": "E",
+  "console_log_path": "",
+
+  "_comment_cooldown": "Minimum seconds between shocks (prevents rapid-fire on multi-hit events)",
+  "cooldown_seconds": 0.5,
+
+  "_comment_dry_run": "When true, prints what WOULD be sent but does not call the API. Use this to test the pipeline.",
+  "dry_run": false
+}
